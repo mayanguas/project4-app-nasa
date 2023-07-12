@@ -1,0 +1,15 @@
+#root {
+  /* Obligamos a aprovechar el máximo tamaño disponible */
+  width: 100%;
+  /* Establecemos un mínimo de ancho enfocado a la media mobile */
+  min-width: 315px;
+  /* Este es el padding general que permite ver la imagen de las estrellas alrededor */
+  padding: 30px;
+}
+
+#App {
+  padding: 10px 20px;
+  /* gap: 20px; */
+  background-color: blue;
+  border-radius: 16px;
+}
