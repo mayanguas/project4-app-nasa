@@ -15,6 +15,8 @@ const App = () => {
     <div id="App">
       <MainLayout>
         <Header
+          title="Picture of the day"
+          subtitle={toggle}
           handleChange={() => {
             toggle === 'APOD' ? setToggle('ROVER') : setToggle('APOD');
           }}

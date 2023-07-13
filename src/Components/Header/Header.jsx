@@ -1,12 +1,18 @@
 import './Header.css';
 
-const Header = ({ handleChange }) => {
+const Header = ({ title, subtitle, handleChange }) => {
   return (
     <header>
       <div className="nasa-image">
         <img src="/assets/images/logo-nasa-2.png" alt="NASA logo" />
       </div>
-      Título
+      <div className="title">
+        <h1>{title}</h1>
+        <h2 style={subtitle === 'APOD' ? { color: 'blue' } : { color: 'red' }}>
+          {subtitle}
+        </h2>
+      </div>
+
       <div className="switch-container">
         <p>APOD</p>
         <label className="switch">

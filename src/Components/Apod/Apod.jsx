@@ -1,8 +1,8 @@
 import './Apod.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Error from '../Error/Error';
 import { today } from '../../data/data';
+import { ErrorApi, Loading } from '../Error/Error';
 
 const Apod = () => {
   console.log(today);
@@ -21,7 +21,7 @@ const Apod = () => {
       setApod(res);
       setApodLoaded(true);
     } catch (error) {
-      setApodError('Fetching data from NASA failed', error);
+      setApodError(true);
     }
   };
 
@@ -29,11 +29,14 @@ const Apod = () => {
     getApodNasa();
   }, [date]);
 
+  // Si en la carga de los datos de la API ocurre un error aparcerá este template:
+  if (apodError) {
+    return <ErrorApi />;
+  }
+
   return (
     <article id="apod-container">
       <div>
-        <div>Select a date</div>
-        <p>{date}</p>
         <input
           type="date"
           name="date"
@@ -63,7 +66,7 @@ const Apod = () => {
             </div>
           </div>
         ) : (
-          'Cargando...'
+          <Loading />
         )}
       </div>
     </article>

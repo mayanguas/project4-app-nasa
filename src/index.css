@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Open+Sans:wght@300;400;500;700;800&display=swap');
+
 * {
   margin: 0px;
   padding: 0px;
@@ -5,37 +7,8 @@
 }
 
 :root {
-  /* COLOR PALETTE */
-  --ns__color--blue: #0e3d91;
-  --ns__color--white: #ffff;
-  --ns__color--white--blur: #ffffff8c;
-  --ns__color--red: #f93e23;
-
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Titillium Web', sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
+  font-family: 'Comic Neue', cursive;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Make images easier to work with */
@@ -43,14 +16,6 @@ img,
 picture {
   max-width: 100%;
   display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
 }
 
 /* Set core body defaults */

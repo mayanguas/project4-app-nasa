@@ -1,9 +1,12 @@
 header {
+  height: fit-content;
   background-color: aquamarine;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  border: 3px solid red;
 }
 
 .nasa-image {
@@ -11,7 +14,12 @@ header {
   height: 120px;
 }
 
-/* --- SWITCH --- */
+.title {
+  order: 2;
+  text-align: center;
+}
+
+/* ------ SWITCH ------ */
 .switch-container {
   display: flex;
   align-items: center;
