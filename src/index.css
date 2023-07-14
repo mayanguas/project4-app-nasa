@@ -7,8 +7,14 @@
 }
 
 :root {
+  /* ------ FUENTES ------ */
   font-family: 'Comic Neue', cursive;
   font-family: 'Open Sans', sans-serif;
+
+  /* ------ COLORES ------ */
+  --primary-color: #1f8bff;
+  --secondary-color: #ff3c00;
+  --tertiary-color: #ffcc00;
 }
 
 /* Make images easier to work with */

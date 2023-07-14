@@ -1,3 +1,5 @@
+import './Error.css';
+
 export const Loading = () => {
   return (
     <div className="loading">
@@ -9,12 +11,15 @@ export const Loading = () => {
 export const ErrorApi = () => {
   return (
     <div className="errorApi">
-      <h2>
-        The use of this demo API is limited.
-        <br />
-        If you see this message, the limit has been reached, wait a few minutes
-        and try again.
-      </h2>
+      <h3>
+        <p>
+          The use of this demo API is <span>limited</span>.
+        </p>
+        <p>
+          If you see this message, the limit has been reached,{' '}
+          <span>wait a few minutes</span> and try again.
+        </p>
+      </h3>
     </div>
   );
 };
@@ -22,12 +27,16 @@ export const ErrorApi = () => {
 export const ErrorDate = () => {
   return (
     <div className="errorDate">
-      <img src="/assets/images/404.jpg" alt="" />
-      <h2>
-        There are no images from this date.
-        <br />
-        Please choose another one.
-      </h2>
+      <h3>
+        <p>Houston we have a problem!</p>
+        <img src="/assets/images/Error404_small.jpg" alt="" />
+        <p>
+          There are <span>NO</span> images from this date.
+        </p>
+        <p className="choose">
+          Please choose <span>another one</span>.
+        </p>
+      </h3>
     </div>
   );
 };

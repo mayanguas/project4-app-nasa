@@ -1,3 +1,10 @@
 footer {
-  background-color: darkorchid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 2rem;
+  background-color: var(--tertiary-color);
+  margin-top: 20px;
 }

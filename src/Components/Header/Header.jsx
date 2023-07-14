@@ -8,7 +8,13 @@ const Header = ({ title, subtitle, handleChange }) => {
       </div>
       <div className="title">
         <h1>{title}</h1>
-        <h2 style={subtitle === 'APOD' ? { color: 'blue' } : { color: 'red' }}>
+        <h2
+          style={
+            subtitle === 'APOD'
+              ? { color: 'var(--primary-color)' }
+              : { color: 'var(--secondary-color)' }
+          }
+        >
           {subtitle}
         </h2>
       </div>

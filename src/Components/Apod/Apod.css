@@ -1,4 +1,42 @@
 #apod-container {
-  margin-top: 200px;
-  border: 3px solid orange;
+  margin-top: 220px;
+}
+
+/* Para cambiar el aspecto del input de tipo date hay que atacar directamente a date en caso contrario NO funciona */
+#date {
+  margin-top: 7px;
+  padding: 4px 4px 3px 5px;
+  line-height: normal;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--tertiary-color);
+  color: black;
+  border: 3px solid rgb(209, 80, 29);
+}
+
+.photo-title > h2 {
+  font-family: 'Comic Neue', cursive;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  background-color: var(--primary-color);
+  padding: 0.6rem;
+  /* border-bottom-left-radius: 1.5rem; */
+  border-bottom-right-radius: 3rem;
+  margin-bottom: 1rem;
+}
+
+.dataApod > p {
+  font-size: 1.1rem;
+}
+
+.apodCopyright {
+  margin: 1rem 0 1rem 0;
+  font-size: 1.1rem;
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+  border-bottom-right-radius: 2.5rem;
 }

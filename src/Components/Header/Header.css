@@ -1,22 +1,31 @@
 header {
   height: fit-content;
-  background-color: aquamarine;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  border: 3px solid red;
+  gap: 1rem;
 }
 
 .nasa-image {
   width: 120px;
   height: 120px;
+  margin-top: 1rem;
 }
 
 .title {
   order: 2;
   text-align: center;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+header h2 {
+  font-family: 'Comic Neue', cursive;
+  font-size: 3em;
 }
 
 /* ------ SWITCH ------ */
@@ -45,7 +54,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #6ba1ff;
+  background-color: var(--primary-color);
 }
 
 /* Posición, tamaño y color del slider */
@@ -63,7 +72,7 @@ header {
 
 /* Background color when it is checked */
 input:checked + .slider {
-  background-color: #f5928d;
+  background-color: var(--secondary-color);
 }
 
 input:focus + .slider {
@@ -74,4 +83,9 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+.switch-container > p {
+  font-size: 1.1rem;
+  font-weight: bold;
 }

@@ -36,7 +36,7 @@ const Apod = () => {
 
   return (
     <article id="apod-container">
-      <div>
+      <div id="inputApodDate">
         <input
           type="date"
           name="date"
@@ -55,14 +55,18 @@ const Apod = () => {
             <div>
               <img src={apod.data?.url} alt="Image from NASA" />
             </div>
-            <div>
-              <h2>{apod.data?.title}</h2>
+            <div className="dataApod">
+              <div className="photo-title">
+                <h2>{apod.data?.title}</h2>
+              </div>
               <p>{apod.data?.explanation}</p>
               {/* A veces el dato del copyright no existe debido a que es público */}
-              <p>
-                Copyright:{' '}
-                {apod.data?.copyright ? apod.data?.copyright : 'Public'}
-              </p>
+              <div className="apodCopyright">
+                <p>
+                  Copyright:{' '}
+                  {apod.data?.copyright ? apod.data?.copyright : 'Public'}
+                </p>
+              </div>
             </div>
           </div>
         ) : (

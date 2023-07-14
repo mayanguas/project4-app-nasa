@@ -39,7 +39,7 @@ const Rover = () => {
 
   return (
     <div>
-      <div>
+      <div className="roverInputDate">
         <input
           type="date"
           name="date"
@@ -62,9 +62,11 @@ const Rover = () => {
             />
           </div>
           <div>
-            <h3>Rover: Curiosity</h3>
-            <h3>Camera: {rover?.data?.photos[0].camera.full_name}</h3>
-            <p>
+            <div className="roverTitle">
+              <h3>Camera: {rover?.data?.photos[0].camera.full_name}</h3>
+            </div>
+
+            <p className="roverParagraph">
               {/* En la API del Rover solamente aparecen imágenes, no tiene texto por lo que pongo un texto general para todas las imágenes */}
               NASA's Mars Rover Photos API is designed to collect image data
               taken by the Perseverance, Curiosity, Opportunity and Spirit
