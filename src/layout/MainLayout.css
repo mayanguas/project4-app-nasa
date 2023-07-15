@@ -2,7 +2,7 @@
   min-height: auto;
   display: grid;
   grid-template-rows:
-    20vh
+    min-height 20vh
     1fr
     20vh;
 }

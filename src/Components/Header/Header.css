@@ -6,6 +6,7 @@ header {
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 30px;
 }
 
 .nasa-image {
@@ -14,6 +15,7 @@ header {
   margin-top: 1rem;
 }
 
+/* Cambio el orden para que el título y subtítuloo aparezcan en la posición deseada en formato móbil */
 .title {
   order: 2;
   text-align: center;
@@ -28,7 +30,7 @@ header h2 {
   font-size: 3em;
 }
 
-/* ------ SWITCH ------ */
+/* ------- SWITCH ------- */
 .switch-container {
   display: flex;
   align-items: center;
@@ -88,4 +90,35 @@ input:checked + .slider:before {
 .switch-container > p {
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+/* =================================================
+                   MEDIA QUERIES
+ ================================================= */
+
+/* Devuelvo el orden natural para que el título y el subtítulo se vean en el centro */
+
+@media screen and (min-width: 376px) and (max-width: 767px) {
+  .title {
+    order: 0;
+  }
+
+  .nasa-image {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    order: 0;
+  }
+
+  .nasa-image {
+    margin-top: 0px;
+  }
+
+  header {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }

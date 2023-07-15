@@ -51,8 +51,8 @@ const Apod = () => {
       </div>
       <div>
         {apodLoaded ? (
-          <div>
-            <div>
+          <div className="apodDataContainer">
+            <div className="apodImage">
               <img src={apod.data?.url} alt="Image from NASA" />
             </div>
             <div className="dataApod">

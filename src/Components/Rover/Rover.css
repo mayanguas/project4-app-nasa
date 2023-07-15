@@ -4,12 +4,40 @@
   margin-bottom: 20px;
   border-bottom-right-radius: 3rem;
   color: white;
-}
-
-.roverInputDate {
-  margin-top: 220px;
+  font-family: 'Comic Neue', cursive;
+  font-size: 1.3rem;
 }
 
 .roverParagraph {
   font-size: 1.1rem;
+}
+
+/* =================================================
+                   MEDIA QUERIES
+ ================================================= */
+
+@media screen and (min-width: 376px) and (max-width: 767px) {
+  #rover-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #rover-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .roverImage {
+    width: 40%;
+  }
+
+  .roverDataContainer {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

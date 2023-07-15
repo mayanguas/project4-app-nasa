@@ -55,13 +55,13 @@ const Rover = () => {
         <ErrorDate />
       ) : (
         <article id="rover-container">
-          <div>
+          <div className="roverImage">
             <img
               src={rover?.data?.photos[0].img_src}
               alt={rover?.data?.photos[0].camera.full_name}
             />
           </div>
-          <div>
+          <div className="roverDataContainer">
             <div className="roverTitle">
               <h3>Camera: {rover?.data?.photos[0].camera.full_name}</h3>
             </div>

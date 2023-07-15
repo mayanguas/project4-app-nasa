@@ -1,7 +1,3 @@
-#apod-container {
-  margin-top: 220px;
-}
-
 /* Para cambiar el aspecto del input de tipo date hay que atacar directamente a date en caso contrario NO funciona */
 #date {
   margin-top: 7px;
@@ -36,7 +32,34 @@
 .apodCopyright {
   margin: 1rem 0 1rem 0;
   font-size: 1.1rem;
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
   padding: 0.5rem;
   border-bottom-right-radius: 2.5rem;
+}
+
+/* =================================================
+                   MEDIA QUERIES
+ ================================================= */
+
+@media screen and (min-width: 376px) and (max-width: 767px) {
+}
+
+@media screen and (min-width: 768px) {
+  .apodDataContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .dataApod {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+  }
+
+  .apodImage {
+    width: 40%;
+  }
 }
