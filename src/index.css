@@ -17,22 +17,21 @@
   --tertiary-color: #ffcc00;
 }
 
-/* Make images easier to work with */
+/* Para trabajar mas fácilmente con imágenes */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
 
-/* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  /* Centramos el contenido del body */
+  /* Centro el contenido del body */
   display: flex;
   align-items: center;
-  /* Establecemos el background y le damos estilos */
+  /* Estilos para el background */
   background-image: url(/assets/images/background.jpg);
   background-size: cover;
   background-position: 100%;

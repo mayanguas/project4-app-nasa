@@ -1,7 +1,7 @@
 #root {
-  /* Obligamos a aprovechar el máximo tamaño disponible */
+  /* Con esto consigo que ocupe el máximo disponible */
   width: 100%;
-  /* Establecemos un mínimo de ancho enfocado a la media mobile */
+  /* Mínimo de ancho para dispositivos móbiles */
   min-width: 315px;
   /* Este es el padding general que permite ver la imagen de las estrellas alrededor */
   padding: 30px;
