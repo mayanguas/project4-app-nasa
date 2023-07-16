@@ -4,6 +4,7 @@ export const Loading = () => {
   return (
     <div className="loading">
       <h2>Loading...</h2>
+      <span class="loader"></span>
     </div>
   );
 };

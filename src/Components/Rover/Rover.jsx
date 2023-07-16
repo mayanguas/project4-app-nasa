@@ -1,9 +1,11 @@
 import './Rover.css';
 import { useEffect, useState } from 'react';
 import { today } from '../../data/data';
-
 import axios from 'axios';
 import { ErrorApi, ErrorDate, Loading } from '../Error/Error';
+import ModalRover from '../ModalRover/ModalRover';
+
+import { ROVER_URL } from '../../data/data';
 
 const Rover = () => {
   const [date, setDate] = useState(today);
@@ -11,10 +13,15 @@ const Rover = () => {
   const [roverError, setRoverError] = useState(false);
   const [roverLoaded, setRoverLoaded] = useState(false);
 
+  // Estado para el modal
+  const [modalRover, setModalRover] = useState(false);
+
   const getRoverNasa = async () => {
     try {
       const res = await axios.get(
-        `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=ar93yA7I8ESqwthjtYnprKo4UVfFNojEao5hWfwN`
+        `${ROVER_URL}curiosity/photos?earth_date=${date}&api_key=${
+          import.meta.env.VITE_NASA_API_KEY
+        }`
       );
       setRover(res);
       setRoverLoaded(true);
@@ -60,7 +67,26 @@ const Rover = () => {
               src={rover?.data?.photos[0].img_src}
               alt={rover?.data?.photos[0].camera.full_name}
             />
+            <button
+              onClick={() => setModalRover(!modalRover)}
+              className="boton-modal-rover"
+            >
+              +
+            </button>
           </div>
+
+          <div
+            className={
+              modalRover ? 'modal-visible-rover' : 'modal-oculto-rover'
+            }
+          >
+            <ModalRover
+              modalRover={modalRover}
+              setModalRover={setModalRover}
+              rover={rover}
+            />
+          </div>
+
           <div className="roverDataContainer">
             <div className="roverTitle">
               <h3>Camera: {rover?.data?.photos[0].camera.full_name}</h3>

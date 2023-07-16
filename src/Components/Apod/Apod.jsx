@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { today } from '../../data/data';
 import { ErrorApi, Loading } from '../Error/Error';
+import Modal from '../Modal/Modal';
+
+import { NASA_URL } from '../../data/data';
 
 const Apod = () => {
   console.log(today);
@@ -11,12 +14,15 @@ const Apod = () => {
   const [apodError, setApodError] = useState(false);
   const [apodLoaded, setApodLoaded] = useState(false);
 
-  // planetary/apod?date=${date}&api_key=${nasaApiKey}`;
+  // Estado para el modal
+  const [modal, setModal] = useState(false);
 
   const getApodNasa = async () => {
     try {
       const res = await axios.get(
-        `https://api.nasa.gov/planetary/apod?date=${date}&api_key=ar93yA7I8ESqwthjtYnprKo4UVfFNojEao5hWfwN`
+        `${NASA_URL}planetary/apod?date=${date}&api_key=${
+          import.meta.env.VITE_NASA_API_KEY
+        }`
       );
       setApod(res);
       setApodLoaded(true);
@@ -52,9 +58,28 @@ const Apod = () => {
       <div>
         {apodLoaded ? (
           <div className="apodDataContainer">
-            <div className="apodImage">
-              <img src={apod.data?.url} alt="Image from NASA" />
+            {apod.data?.media_type === 'video' ? (
+              <iframe
+                src={apod.data?.url}
+                frameborder="0"
+                className="apod-video"
+              ></iframe>
+            ) : (
+              <div className="apodImage">
+                <img src={apod.data?.url} alt="Image from NASA" />
+                <button
+                  onClick={() => setModal(!modal)}
+                  className="boton-modal"
+                >
+                  +
+                </button>
+              </div>
+            )}
+
+            <div className={modal ? 'modal-visible' : 'modal-oculto'}>
+              <Modal modal={modal} setModal={setModal} apod={apod} />
             </div>
+
             <div className="dataApod">
               <div className="photo-title">
                 <h2>{apod.data?.title}</h2>
